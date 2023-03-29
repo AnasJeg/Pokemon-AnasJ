@@ -18,11 +18,10 @@
         android:layout_height="wrap_content"
         />
 
-    <FrameLayout
-        android:id="@+id/list_pokemon"
-        android:name="me.jegoualanas.pokemon_app.PokemonList"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="me.jegoualanas.pokemon_anasj.PokemonList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-       >
-    </FrameLayout>
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_pokemon_list" />
 </LinearLayout>
