@@ -1,6 +1,7 @@
 package me.jegoualanas.pokemon_anasj.models;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Pokemon {
     private int id;
@@ -15,6 +16,10 @@ public class Pokemon {
     private double spawn_chance;
     private double avg_spawns;
     private String spawn_time;
+
+
+
+    private List<String> type;
     private ArrayList<Double> multipliers;
     private ArrayList<String> weaknesses;
     private ArrayList<NextEvolution> next_evolution;
@@ -23,7 +28,7 @@ public class Pokemon {
 
     }
 
-    public Pokemon(int id, String num, String name, String img, String height, String weight, String candy, int candy_count, String egg, double spawn_chance, double avg_spawns, String spawn_time, ArrayList<Double> multipliers, ArrayList<String> weaknesses, ArrayList<NextEvolution> next_evolution, ArrayList<PrevEvolution> prev_evolution) {
+    public Pokemon(int id, String num, String name, String img, String height, String weight, String candy, int candy_count, String egg, double spawn_chance, double avg_spawns, String spawn_time, List<String> type,ArrayList<Double> multipliers, ArrayList<String> weaknesses, ArrayList<NextEvolution> next_evolution, ArrayList<PrevEvolution> prev_evolution) {
         this.id = id;
         this.num = num;
         this.name = name;
@@ -37,6 +42,7 @@ public class Pokemon {
         this.avg_spawns = avg_spawns;
         this.spawn_time = spawn_time;
         this.multipliers = multipliers;
+        this.type = type;
         this.weaknesses = weaknesses;
         this.next_evolution = next_evolution;
         this.prev_evolution = prev_evolution;
@@ -168,5 +174,13 @@ public class Pokemon {
 
     public void setPrev_evolution(ArrayList<PrevEvolution> prev_evolution) {
         this.prev_evolution = prev_evolution;
+    }
+
+    public List<String> getType() {
+        return type;
+    }
+
+    public void setType(List<String> type) {
+        this.type = type;
     }
 }

@@ -1,4 +1,4 @@
-package me.jegoualanas.pokemon_anasj;
+package me.jegoualanas.pokemon_anasj.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,6 +13,7 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.functions.Consumer;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+import me.jegoualanas.pokemon_anasj.R;
 import me.jegoualanas.pokemon_anasj.adapter.Pokemon_list_Adp;
 import me.jegoualanas.pokemon_anasj.comm.Comm;
 import me.jegoualanas.pokemon_anasj.comm.ItemDec;

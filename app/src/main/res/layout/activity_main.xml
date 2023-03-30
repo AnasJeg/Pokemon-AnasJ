@@ -11,17 +11,22 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:minHeight="?attr/actionBarSize"
-        app:titleTextColor="@android:color/white"
-        android:background="@color/design_default_color_primary"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription" />
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="me.jegoualanas.pokemon_anasj.PokemonList"
+        android:name="me.jegoualanas.pokemon_anasj.fragment.PokemonList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:layout="@layout/fragment_pokemon_list" />
 </LinearLayout>

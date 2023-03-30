@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.DetailFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginTop="0dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Material3.NavigationView.Item" >
+
+            <ImageButton
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@android:color/transparent"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/pokimg"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription" />
+
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/pokName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardView"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textAppearance="@style/Platform.MaterialComponents.Light"
+            android:textColor="@color/purple_700"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:maxLines="1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/typeList"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/pokName"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:scrollbars="none"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/item_type"/>
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pokName"
+            android:layout_marginTop="75dp"
+            android:layout_marginStart="60dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700" />
+
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pokName"
+            android:layout_marginTop="75dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="60dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700" />
+
+        <TextView
+            android:id="@+id/weightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weight"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="60dp"
+            android:text="@string/weight"
+            android:textColor="@color/purple_700"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/heightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/height"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="60dp"
+            android:text="@string/height"
+            android:textColor="@color/purple_700"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
