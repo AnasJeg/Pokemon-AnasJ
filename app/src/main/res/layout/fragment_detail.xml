@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.DetailFragment">
+    tools:context=".fragment.DetailFragment"
+    >
 
 
     <RelativeLayout
@@ -58,18 +59,7 @@
             android:textStyle="bold"
             android:maxLines="1" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/typeList"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_below="@+id/pokName"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:layout_centerHorizontal="true"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:scrollbars="none"
-            android:nestedScrollingEnabled="false"
-            tools:listitem="@layout/item_type"/>
+
 
         <TextView
             android:id="@+id/weight"

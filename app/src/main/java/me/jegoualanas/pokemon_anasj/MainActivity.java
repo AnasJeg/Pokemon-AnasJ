@@ -34,17 +34,15 @@ public class MainActivity extends AppCompatActivity {
                 //Remplace FRAGMENT
                 Fragment detailFragment = DetailFragment.getInstance();
                 int position = intent.getIntExtra("position", -1);
-             //   String num = intent.getStringExtra("num");
                 Bundle bundle = new Bundle();
                 bundle.putInt("position", position);
                 detailFragment.setArguments(bundle);
-
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragmentContainerView, detailFragment);
                 fragmentTransaction.addToBackStack("detail");
                 fragmentTransaction.commit();
 
-                //Set Pokemon Name for Toolbar
+                //name -> toolbar
                 Pokemon pokemon = Comm.comlist.get(position);
                 toolbar.setTitle(pokemon.getName());
 
@@ -56,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar=findViewById(R.id.toolbar);
-        toolbar.setTitle("anas-pk");
+        toolbar.setTitle("AJ-POK");
         setSupportActionBar(toolbar);
 
         LocalBroadcastManager.getInstance(this)
@@ -69,14 +67,11 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
 
             case android.R.id.home:
-                toolbar.setTitle("POKEMON Anas");
+                toolbar.setTitle("AJ-POK");
 
-                //Clear all fragment detail and pop to list fragment
                 getSupportFragmentManager().popBackStack("detail", FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 getSupportFragmentManager().popBackStack("type", FragmentManager.POP_BACK_STACK_INCLUSIVE);
 
-
-                //Replace Fragment
                 Fragment pokemonList = PokemonList.getInstance();
 
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();

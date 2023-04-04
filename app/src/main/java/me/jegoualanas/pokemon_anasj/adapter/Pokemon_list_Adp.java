@@ -26,8 +26,6 @@ public class Pokemon_list_Adp extends RecyclerView.Adapter<Pokemon_list_Adp.MyVi
     Context context;
     List<Pokemon> pokemonList;
 
-
-
     public Pokemon_list_Adp(Context context, List<Pokemon> pokemonList) {
         this.context = context;
         this.pokemonList = pokemonList;

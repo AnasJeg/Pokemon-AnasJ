@@ -8,13 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
 import me.jegoualanas.pokemon_anasj.R;
-import me.jegoualanas.pokemon_anasj.adapter.Pokemon_Type_Adp;
 import me.jegoualanas.pokemon_anasj.comm.Comm;
 import me.jegoualanas.pokemon_anasj.models.Pokemon;
 
@@ -89,11 +87,6 @@ public class DetailFragment extends Fragment {
         pokheight= (TextView) itemView.findViewById(R.id.height);
         pokweight = (TextView) itemView.findViewById(R.id.weight);
 
-        recycler_type = (RecyclerView)itemView.findViewById(R.id.typeList);
-        recycler_type.setHasFixedSize(true);
-        recycler_type.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
-
-        
         setDetailPok(pokemon);
 
         return itemView;
@@ -108,8 +101,6 @@ public class DetailFragment extends Fragment {
         pokweight.setText(pokemon.getWeight());
 
         //Set Type
-        Pokemon_Type_Adp typeAdapter = new Pokemon_Type_Adp(getActivity(), pokemon.getType());
-        recycler_type.setAdapter(typeAdapter);
 
     }
 }
