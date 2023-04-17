@@ -1,5 +1,5 @@
 # Pokemon App : 
-## Jegoual Anas et Naciri Zineb
+## JEGOUAL Anas et NACIRI Zineb
 
 ### L'application que nous avons développé est une application mobile basée sur la plateforme Android, créée avec Android Studio en utilisant le langage de programmation Java. Cette application utilise l'API de Pokédex, qui fournit des informations sur les différents personnages du jeu Pokémon. 
 
